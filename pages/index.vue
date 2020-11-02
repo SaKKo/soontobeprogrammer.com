@@ -105,21 +105,23 @@ export default {
     },
   },
   head() {
+    const title =
+      'หนังสือ Javascript สำหรับมือใหม่ | เกิดอยากจะเป็น โปรแกรมเมอร์';
+    const description =
+      'สำหรับผู้เริ่มต้นและต้องการเรียนรู้พื้นฐานโปรแกรมมิ่ง มีคอมเครื่องเดียวก็ทำได้';
     return {
-      title: 'หนังสือ Javascript สำหรับมือใหม่ | เกิดอยากจะเป็น โปรแกรมเมอร์',
+      title,
       script: [{ src: 'https://apis.google.com/js/platform.js' }],
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content:
-            'หนังสือสอน Javascript สำหรับผู้เริ่มต้นและต้องการเรียนรู้พื้นฐานโปรแกรมมิ่ง',
+          content: description,
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content:
-            'หนังสือ Javascript สำหรับมือใหม่ | เกิดอยากจะเป็น โปรแกรมเมอร์',
+          content: title,
         },
         {
           hid: 'og:url',
@@ -134,8 +136,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content:
-            'หนังสือสอน Javascript สำหรับผู้เริ่มต้นและต้องการเรียนรู้พื้นฐานโปรแกรมมิ่ง',
+          content: description,
         },
         {
           hid: 'og:image',
