@@ -8,20 +8,28 @@
           <Button
             icon="ios-book"
             to="https://leanpub.com/soon-to-be-programmer"
+            target="_blank"
           ></Button>
           <Button
             icon="logo-facebook"
             to="https://www.facebook.com/soon.to.be.programmer"
+            target="_blank"
           ></Button>
           <Button
             icon="ios-people"
             to="https://www.facebook.com/groups/soon.to.be.programmer.book"
+            target="_blank"
           ></Button>
           <Button
             icon="logo-youtube"
             to="https://youtube.com/sakkosama"
+            target="_blank"
           ></Button>
-          <Button icon="logo-github" to="https://github.com/sakko"></Button>
+          <Button
+            icon="logo-github"
+            to="https://github.com/sakko"
+            target="_blank"
+          ></Button>
         </ButtonGroup>
         <div>by Tanasak Tantitarntong</div>
       </Footer>

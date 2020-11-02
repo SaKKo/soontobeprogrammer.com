@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="buy-book">
-    <a href="https://leanpub.com/soon-to-be-programmer">
+    <a href="https://leanpub.com/soon-to-be-programmer" target="_blank">
       <Button size="large" class="buy-button">
         <Icon type="ios-arrow-forward"></Icon>
         <Icon type="ios-arrow-forward"></Icon>

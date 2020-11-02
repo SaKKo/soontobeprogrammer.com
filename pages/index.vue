@@ -9,6 +9,7 @@
       โดย เจ้าของ
       <a
         href="https://youtube.com/sakkosama"
+        target="_blank"
         style="text-decoration: underline"
       >
         Youtube Channel SaKKosama
@@ -49,6 +50,7 @@
         VueJS/NuxtJS ต่อได้โดยศึกษาจากวีดีโอ ที่ผมทำไว้ใน
         <a
           href="https://www.youtube.com/watch?v=k20Srsf2r7k&list=PLXm-UJjVcJCMd24NIQTPcqHhfnK-QbPmD"
+          target="_blank"
           style="text-decoration: underline"
           >Youtube Channel Vue/NuxtJS Playlist</a
         >
@@ -61,6 +63,7 @@
         Rails สามารถดูวีดีโอสอนฟรีได้ที่
         <a
           href="https://www.youtube.com/watch?v=CxFAU6x9gso&list=PLXm-UJjVcJCPxawSeVSYP1bsP_0_iMpQJ"
+          target="_blank"
           style="text-decoration: underline"
           >Youtube Channel Ruby on Rails Playlist</a
         >
