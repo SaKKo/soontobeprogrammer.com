@@ -16,8 +16,11 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
-    "iview": "^3.5.4",
-    "nuxt": "^2.14.6"
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "nuxt": "^2.14.6",
+    "view-design": "^4.4.0",
+    "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

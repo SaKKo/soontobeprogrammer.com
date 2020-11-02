@@ -1,55 +1,51 @@
 <template>
   <div>
-    <Nuxt />
+    <Layout>
+      <div class="header">เกิดอยากจะเป็น โปรแกรมเมอร์</div>
+      <Content class="container"><Nuxt /></Content>
+      <Footer class="footer">
+        <ButtonGroup>
+          <Button
+            icon="ios-book"
+            to="https://leanpub.com/soon-to-be-programmer"
+          ></Button>
+          <Button
+            icon="logo-facebook"
+            to="https://www.facebook.com/soon.to.be.programmer"
+          ></Button>
+          <Button
+            icon="ios-people"
+            to="https://www.facebook.com/groups/soon.to.be.programmer.book"
+          ></Button>
+          <Button
+            icon="logo-youtube"
+            to="https://youtube.com/sakkosama"
+          ></Button>
+          <Button icon="logo-github" to="https://github.com/sakko"></Button>
+        </ButtonGroup>
+        <div>by Tanasak Tantitarntong</div>
+      </Footer>
+    </Layout>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<style lang="css" scoped>
+.header {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 20px 0 0 0;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  height: 100%;
+  min-height: calc(100vh - 64px - 69px);
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.footer {
+  text-align: center;
 }
 </style>
