@@ -131,7 +131,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://www.soontobeprogrammer.com',
+          content: 'https://soontobeprogrammer.com',
         },
         {
           hid: 'og:type',
@@ -147,7 +147,7 @@ export default {
           hid: 'og:image',
           property: 'og:image',
           content:
-            'https://www.soontobeprogrammer.com/soon-to-be-programmer-youtube-cover.png',
+            'https://soontobeprogrammer.com/soon-to-be-programmer-youtube-cover.png',
         },
         {
           hid: 'og:site_name',
