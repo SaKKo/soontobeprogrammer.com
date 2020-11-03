@@ -92,17 +92,24 @@ export default {
     return {};
   },
   mounted() {
-    this.$nextTick(() => {
-      window.gapi.ytsubscribe.render(
-        document.getElementById('youtube-subscribe'),
-        {
-          channel: 'saklism',
-          layout: 'full',
-          theme: 'dark',
-          count: 'default',
-        }
-      );
-    });
+    setTimeout(() => {
+      const script = document.createElement('script');
+      const scripts = document.getElementsByTagName('script')[0];
+      script.src = 'https://apis.google.com/js/platform.js';
+      scripts.parentNode.insertBefore(script, scripts);
+
+      setTimeout(() => {
+        window.gapi.ytsubscribe.render(
+          document.getElementById('youtube-subscribe'),
+          {
+            channel: 'saklism',
+            layout: 'full',
+            theme: 'dark',
+            count: 'default',
+          }
+        );
+      }, 3000);
+    }, 1000);
   },
   methods: {
     playVideo() {
@@ -116,7 +123,6 @@ export default {
       'สำหรับผู้เริ่มต้นและต้องการเรียนรู้พื้นฐานโปรแกรมมิ่ง มีคอมเครื่องเดียวก็ทำได้';
     return {
       title,
-      script: [{ src: 'https://apis.google.com/js/platform.js' }],
       meta: [
         {
           hid: 'description',
