@@ -1,11 +1,9 @@
 <template>
   <div class="index-page">
-    <h1 style="text-align: center">หนังสือ สอน Javascript</h1>
-    <h2 style="text-align: center; color: white">พื้นฐานการเขียนโปรแกรม</h2>
-    <h3 style="text-align: center; color: white">
-      เหมาะสำหรับผู้เริ่มต้นอยากเขียนโปรแกรม
-    </h3>
-    <div style="text-align: center; color: white">
+    <div class="youtube-subscribe-container">
+      <div id="youtube-subscribe"></div>
+    </div>
+    <div style="text-align: center; color: white; font-size: 14px">
       โดย เจ้าของ
       <a
         href="https://youtube.com/sakkosama"
@@ -15,14 +13,17 @@
         Youtube Channel SaKKosama
       </a>
     </div>
-    <div class="youtube-subscribe-container">
-      <div id="youtube-subscribe"></div>
-    </div>
+    <h1 style="text-align: center">หนังสือ สอน Javascript</h1>
+    <h2 style="text-align: center; color: white">พื้นฐานการเขียนโปรแกรม</h2>
+    <h3 style="text-align: center; color: white">
+      เหมาะสำหรับผู้เริ่มต้นอยากเขียนโปรแกรม
+    </h3>
     <BuyBook style="margin-top: 20px"></BuyBook>
     <Divider>ดูวีดีโอแนะนำ</Divider>
     <div class="youtube">
       <youtube ref="youtube" video-id="N48mE656U0c" width="100%"> </youtube>
     </div>
+    <BuyBook></BuyBook>
     <Divider>รายละเอียดหนังสือ</Divider>
     <div class="book-intro">
       <p>
@@ -32,15 +33,15 @@
         และสามารถนำความรู้ไปต่อยอดการเขียนโปรแกรมอื่นๆได้อีกเช่น
       </p>
       <div style="text-align: center; margin: 14px 0">
-        <b>Frontend Web Development :</b>
+        <b class="red">Frontend Web Development :</b>
         <br />
         <span>VueJS, ReactJS, AngularJS, JQuery, etc..</span>
         <br />
-        <b>Backend Web Development :</b>
+        <b class="red">Backend Web Development :</b>
         <br />
         <span>Express, Meteor, Sequelize, etc..</span>
         <br />
-        <b>Others :</b>
+        <b class="red">Others :</b>
         <br />
         <span>React-Native Mobile Application, IoT, etc..</span>
         <br />
@@ -48,26 +49,30 @@
       <p>
         เมื่ออ่านหนังสือเล่มนี้จบแล้ว ผมหวังว่าผู้อ่านจะสามารถไปเขียนโปรแกรม
         VueJS/NuxtJS ต่อได้โดยศึกษาจากวีดีโอ ที่ผมทำไว้ใน
+      </p>
+      <div style="text-align: center">
         <a
           href="https://www.youtube.com/watch?v=k20Srsf2r7k&list=PLXm-UJjVcJCMd24NIQTPcqHhfnK-QbPmD"
           target="_blank"
           style="text-decoration: underline"
           >Youtube Channel Vue/NuxtJS Playlist</a
         >
-      </p>
+      </div>
       <p>
         หรือเมื่อเข้าใจวิธีเขียนโปรแกรมแล้ว
         ยังสามารถนำความรู้ไปต่อยอดเขียนภาษาอื่นๆได้อีกมากมาย เนื่องจากว่า
         Javascript นั้นมีความคล้ายกับภาษา C
         ซึ่งเป็นภาษาที่นำพื้นฐานไปต่อยอดได้ง่าย หากสนใจภาษา Ruby หรือ Ruby on
         Rails สามารถดูวีดีโอสอนฟรีได้ที่
+      </p>
+      <div style="text-align: center">
         <a
           href="https://www.youtube.com/watch?v=CxFAU6x9gso&list=PLXm-UJjVcJCPxawSeVSYP1bsP_0_iMpQJ"
           target="_blank"
           style="text-decoration: underline"
           >Youtube Channel Ruby on Rails Playlist</a
         >
-      </p>
+      </div>
       <p style="text-align: center">
         หวังว่าจะได้เจอโปรแกรมเมอร์หน้าใหม่เยอะขึ้นเรื่อยๆนะครับ
       </p>
@@ -165,7 +170,7 @@ export default {
 }
 .youtube-subscribe-container {
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto 0px auto;
   width: 100%;
   max-width: 600px;
   min-width: 300px;
@@ -178,6 +183,9 @@ export default {
 }
 .book-intro p {
   margin-top: 10px;
+}
+.red {
+  color: #c91b00;
 }
 </style>
 

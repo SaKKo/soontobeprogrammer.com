@@ -9,7 +9,9 @@
         <Icon type="ios-arrow-back"></Icon>
       </Button>
     </a>
-    <div>เนื้อหาใหม่ อัพเดทฟรีตลอดครับ</div>
+    <div style="color: white; font-size: 14px">
+      เนื้อหาใหม่ อัพเดทฟรีตลอดครับ
+    </div>
   </div>
 </template>
 
