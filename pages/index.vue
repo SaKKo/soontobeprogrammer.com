@@ -18,12 +18,20 @@
     <h3 style="text-align: center; color: white">
       เหมาะสำหรับผู้เริ่มต้นอยากเขียนโปรแกรม
     </h3>
-    <BuyBook style="margin-top: 20px"></BuyBook>
-    <Divider>ดูวีดีโอแนะนำ</Divider>
-    <div class="youtube">
-      <youtube ref="youtube" video-id="N48mE656U0c" width="100%"> </youtube>
+    <div style="text-align: center">
+      <img
+        src="/soon-to-be-programmer-logo-book-cover-small.png"
+        alt="soon-to-be-programmer-book-cover"
+        style="width: 200px"
+        @click="tableOfContentModal = true"
+      />
     </div>
-    <BuyBook></BuyBook>
+    <div style="text-align: center">
+      <Button class="green-black-button" @click="tableOfContentModal = true"
+        >ดูสารบัญ</Button
+      >
+    </div>
+    <BuyBook style="margin-top: 20px"></BuyBook>
     <Divider>รายละเอียดหนังสือ</Divider>
     <div class="book-intro">
       <p>
@@ -78,18 +86,41 @@
       </p>
       <p style="text-align: center">ขอบคุณครับ</p>
     </div>
-    <BuyBook style="margin-top: 20px"></BuyBook>
+    <Divider>ดูวีดีโอแนะนำ</Divider>
+    <client-only>
+      <div class="youtube">
+        <youtube ref="youtube" video-id="N48mE656U0c" width="100%"> </youtube>
+      </div>
+    </client-only>
+    <Modal
+      v-model="tableOfContentModal"
+      title="สารบัญ"
+      class="table-of-content-modal"
+      :styles="{ top: '20px', marginBottom: '20px' }"
+    >
+      <SoonToBeProgrammerTableOfContent></SoonToBeProgrammerTableOfContent>
+      <div slot="footer">
+        <Button class="green-black-button" @click="tableOfContentModal = false">
+          ปิดสารบัญ
+        </Button>
+      </div>
+    </Modal>
   </div>
 </template>
 
 <script>
 import BuyBook from '~/components/BuyBook';
+import SoonToBeProgrammerTableOfContent from '~/components/SoonToBeProgrammerTableOfContent';
+
 export default {
   components: {
     BuyBook,
+    SoonToBeProgrammerTableOfContent,
   },
   data() {
-    return {};
+    return {
+      tableOfContentModal: false,
+    };
   },
   mounted() {
     setTimeout(() => {
@@ -193,10 +224,24 @@ export default {
 .red {
   color: #c91b00;
 }
+.green-black-button {
+  border-color: #00c200;
+  background-color: black;
+}
 </style>
 
 <style media="screen">
 .index-page .ivu-divider-inner-text {
   color: white;
+}
+.table-of-content-modal .ivu-modal-header,
+.table-of-content-modal .ivu-modal-body,
+.table-of-content-modal .ivu-modal-footer {
+  background-color: #1a1a1a;
+}
+.table-of-content-modal .ivu-modal-header-inner,
+.table-of-content-modal .ivu-modal-body-inner,
+.table-of-content-modal .ivu-modal-footer-inner {
+  color: #00c200;
 }
 </style>
