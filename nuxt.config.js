@@ -1,3 +1,9 @@
+const scripts = [];
+if (process.env.NODE_ENV === 'production') {
+  scripts.push({
+    src: 'https://www.googletagmanager.com/gtag/js?id=G-V6VJ5JZNLV',
+  });
+}
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -18,9 +24,7 @@ export default {
         content: '/favicon/ms-icon-144x144.png',
       },
     ],
-    script: [
-      { src: 'https://www.googletagmanager.com/gtag/js?id=G-V6VJ5JZNLV' },
-    ],
+    script: scripts,
     link: [
       {
         rel: 'apple-touch-icon',
