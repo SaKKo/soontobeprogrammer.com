@@ -84,6 +84,11 @@
       <p style="text-align: center">ขอบคุณครับ</p>
     </div>
     <Divider>ดูวีดีโอแนะนำ</Divider>
+    <div class="youtube-preview">
+      <a href="https://youtu.be/N48mE656U0c" target="_blank">
+        <img src="/youtube-preview-icon.png" alt="" style="width: 100%" />
+      </a>
+    </div>
     <Modal
       v-model="tableOfContentModal"
       title="สารบัญ"
@@ -114,26 +119,7 @@ export default {
       tableOfContentModal: false,
     };
   },
-  mounted() {
-    // setTimeout(() => {
-    //   const script = document.createElement('script');
-    //   const scripts = document.getElementsByTagName('script')[0];
-    //   script.src = 'https://apis.google.com/js/platform.js';
-    //   scripts.parentNode.insertBefore(script, scripts);
-    //
-    //   setTimeout(() => {
-    //     window.gapi.ytsubscribe.render(
-    //       document.getElementById('youtube-subscribe'),
-    //       {
-    //         channel: 'saklism',
-    //         layout: 'full',
-    //         theme: 'dark',
-    //         count: 'default',
-    //       }
-    //     );
-    //   }, 3000);
-    // }, 1000);
-  },
+  mounted() {},
   methods: {},
   head() {
     const title =
@@ -186,19 +172,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.youtube {
+.youtube-preview {
   text-align: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
-  min-width: 300px;
-}
-.youtube-subscribe-container {
-  text-align: center;
-  margin: 10px auto 0px auto;
-  width: 100%;
-  max-width: 600px;
-  min-width: 300px;
+  max-width: 300px;
+  min-width: 200px;
 }
 .book-intro {
   color: white;
