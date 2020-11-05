@@ -1,8 +1,5 @@
 <template>
   <div class="index-page">
-    <div class="youtube-subscribe-container">
-      <div id="youtube-subscribe"></div>
-    </div>
     <div style="text-align: center; color: white; font-size: 14px">
       โดย เจ้าของ
       <a
@@ -87,11 +84,6 @@
       <p style="text-align: center">ขอบคุณครับ</p>
     </div>
     <Divider>ดูวีดีโอแนะนำ</Divider>
-    <client-only>
-      <div class="youtube">
-        <youtube ref="youtube" video-id="N48mE656U0c" width="100%"> </youtube>
-      </div>
-    </client-only>
     <Modal
       v-model="tableOfContentModal"
       title="สารบัญ"
@@ -123,30 +115,26 @@ export default {
     };
   },
   mounted() {
-    setTimeout(() => {
-      const script = document.createElement('script');
-      const scripts = document.getElementsByTagName('script')[0];
-      script.src = 'https://apis.google.com/js/platform.js';
-      scripts.parentNode.insertBefore(script, scripts);
-
-      setTimeout(() => {
-        window.gapi.ytsubscribe.render(
-          document.getElementById('youtube-subscribe'),
-          {
-            channel: 'saklism',
-            layout: 'full',
-            theme: 'dark',
-            count: 'default',
-          }
-        );
-      }, 3000);
-    }, 1000);
+    // setTimeout(() => {
+    //   const script = document.createElement('script');
+    //   const scripts = document.getElementsByTagName('script')[0];
+    //   script.src = 'https://apis.google.com/js/platform.js';
+    //   scripts.parentNode.insertBefore(script, scripts);
+    //
+    //   setTimeout(() => {
+    //     window.gapi.ytsubscribe.render(
+    //       document.getElementById('youtube-subscribe'),
+    //       {
+    //         channel: 'saklism',
+    //         layout: 'full',
+    //         theme: 'dark',
+    //         count: 'default',
+    //       }
+    //     );
+    //   }, 3000);
+    // }, 1000);
   },
-  methods: {
-    playVideo() {
-      this.$refs.youtube.player.playVideo();
-    },
-  },
+  methods: {},
   head() {
     const title =
       'หนังสือ Javascript สำหรับมือใหม่ | เกิดอยากจะเป็น โปรแกรมเมอร์';
