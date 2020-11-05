@@ -2,6 +2,7 @@ const scripts = [];
 if (process.env.NODE_ENV === 'production') {
   scripts.push({
     src: 'https://www.googletagmanager.com/gtag/js?id=G-V6VJ5JZNLV',
+    defer: true,
   });
 }
 export default {
