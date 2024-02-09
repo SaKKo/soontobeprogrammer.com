@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/videos/next-react", {data:[{}],fetch:{},mutations:void 0});
